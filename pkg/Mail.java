@@ -1,28 +1,28 @@
-package document;
+package pkg;
 
-public class Document {
+public class Mail {
 
-   /* This is my first java program.
-    * This will print 'Hello World' as the output
-    */
-
+    // attribute declarations
     private String subject;
     private String ref_number;
     private String sender;
     private String receiver;
+    private String type;
 
-
-    public Document(){
+    // constructor
+    public Mail(){
 
     }
 
-    public Document(String subject, String ref_number, String sender, String receiver){
+    public Mail(String subject, String ref_number, String sender, String receiver, String type){
         this.subject = subject;
         this.ref_number = ref_number;
         this.sender = sender;
         this.receiver = receiver;
+        this.type = type;
     }
 
+    // method definitons
     public String getSubject(){
         return this.subject;
     }
@@ -39,7 +39,7 @@ public class Document {
         this.ref_number = ref_number;
     }
 
-    public String getSendert(){
+    public String getSender(){
         return this.sender;
     }
 
@@ -53,6 +53,14 @@ public class Document {
 
     public void setReceiver(String receiver){
         this.receiver = receiver;
+    }
+
+    public String getType(){
+        return this.type;
+    }
+
+    public void setType(String type){
+        this.type = type;
     }
 
 }
